@@ -4,3 +4,91 @@
     box-sizing: border-box;
 }
 
+:root {
+    --celeste: rgb(193, 251, 255);
+    --lila: rgb(175, 163, 224);
+    --piel: rgb(245, 216, 228);
+    --gris: rgb(114, 115, 119);
+}
+
+body{
+    background-color: var(--celeste);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    padding: 20px 5vw;
+}
+
+.totales{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    padding: 5% 7%;
+}
+
+.contenedorBilletera{
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.iconoBilletera{
+    font-size: 4rem;
+}
+
+#montoDisponible{
+    font-size: 2.5rem;
+}
+
+.montos > h3{
+    color: var(--gris);
+    font-size: 1rem;
+}
+
+
+
+.ingresos{
+    background-color: transparent;
+}
+
+.gastos{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive tablet */
+  
+@media (min-width: 480px){
+}
+
+/* responsive pc escritorio */
+  
+@media (min-width: 1024px){
+}
