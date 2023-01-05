@@ -10,30 +10,37 @@
     <title>Billetera</title>
 </head>
 <body>
+    <div class="modoNoche">
+        <p>Modo día/noche</p>
+        <i class="bi bi-toggle-off"></i>
+        <i class="bi bi-toggle-on"></i>
+    </div>
+
     <section class="totales"> <!-- seccion donde se muestran los montos totales -->
         <div class="contenedorBilletera">
             <i class="bi bi-wallet iconoBilletera"></i>
         </div>
         <div class="montos">
             <div class="contenedorDisponible">
-                <h2 id="montoDisponible">124123</h2>
+                <h2 class="montoDispo" id="montoDisponible">$0</h2>
                 <p>Disponible</p>
             </div>
             <div class="contenedorIngreso">
-                <h3 id="montoIngresos">12312</h3>
+                <h3 id="montoIngresos">$0</h3>
                 <p>Total ingreso</p>
             </div>
             <div class="contenedorGasto">
-                <h3 id="montoGastos">12312</h3>
+                <h3 id="montoGastos">$0</h3>
                 <p>Total gastos</p>
                 </div>
         </div>
     </section>
 
+
     <section class="ingresos"> <!-- seccion donde se ingresa el dinero disponible y los gastos -->
         <div class="inputDisponible">
             <label for="idDispo">Dinero disponible</label>
-            <input type="number" id="idDispo" placeholder="Ingrese su dinero disponible">
+            <input onkeypress="disponible(event)" type="number" id="idDispo" placeholder="Ingrese su dinero disponible">
         </div>
         <div class="contenedorInputs">
             <div class="gastoMonto">
@@ -46,12 +53,29 @@
                     <input type="number" id="idMonto" placeholder="Ingrese monto del gasto">    
                 </div>
             </div>
-            <a href="#"><i class="bi bi-plus-circle"></i></a>   
+            <i onclick="agregarGasto()" class="bi bi-plus-circle iconoGasto"></i>
         </div>
     </section>
 
-    <section class="gastos"> <!-- seccion donde se muestran los gastos -->
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, quidem iure magnam maxime reiciendis facilis repudiandae. Reprehenderit minus architecto dolorum possimus, hic error at deserunt voluptatum eum eaque sequi ut!</p>
+
+    <section class="gastos">    <!-- seccion donde se muestran los gastos -->
+        <div class="tituloGastos">
+            <h2>Gastos</h2>
+        </div>
+        <ul class="listaGastos" id="idLista">
+            <li>
+                <div>
+                    <i class="bi bi-cash-coin iconBillete"></i>
+                    <span>ventilador</span>
+                </div>
+                <div>
+                    <span>5000</span>
+                    <i class="bi bi-trash3 iconTacho"></i>
+                </div>
+            </li>
+            
+            
+        </ul>
     </section>
 
 

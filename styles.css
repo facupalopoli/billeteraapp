@@ -7,21 +7,30 @@
 :root {
     --celeste: rgb(193, 251, 255);
     --lila: rgb(175, 163, 224);
+    --violeta: rgb(116, 53, 201);
     --piel: rgb(245, 216, 228);
     --gris: rgb(114, 115, 119);
+    --grisclaro: rgb(242, 242, 242);
 }
 
 body{
-    background-color: var(--celeste);
+    background: linear-gradient(var(--celeste), var(--piel), var(--lila));
     font-family: 'Poppins', sans-serif;
     height: 100vh;
-    padding: 20px 5vw;
+    padding: 0 5vw;
     display: flex;
     flex-direction: column;
 }
 
 p{
     font-size: .8rem;
+}
+
+.modoNoche{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 1vh 0;
 }
 
 .totales{           /* seccion donde se muestran los montos totales  */
@@ -40,10 +49,23 @@ p{
 
 .iconoBilletera{
     font-size: 3rem;
+    background: linear-gradient(#8A92B3, #63688F, #464A76, #8B92B0);
+    background-clip: text;
+
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
 }
 
-#montoDisponible{
+.montoDispo{
     font-size: 2rem;
+    color: green;
 }
 
 .montos{
@@ -77,7 +99,7 @@ p{
 }
 
 .contenedorInputs > div{
-    width: 60%;
+    width: 75%;
 }
 
 label{
@@ -87,9 +109,14 @@ label{
 input{
     background-color: transparent;
     border: 0;
-    width: 100px;
+    width: 170px;
     font-size: .8rem;
     color: var(--gris);
+    padding-left: 5px;
+}
+
+.iconoGasto{
+    color: black;
 }
 
 
@@ -97,9 +124,52 @@ input{
 .gastos{         /* seccion donde se muestran los gastos */
     background-color: white;
     border-radius: 10px;
-    display: flex;
-    height: 70%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    overflow: auto;
 }
+
+.tituloGastos{
+    border-bottom: 1px solid var(--grisclaro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloGastos > h2{
+    color: var(--violeta);
+    font-size: 1rem;
+    text-align: center;
+    width: 40%;
+    padding: 10px 0;
+    border-bottom: 2px solid var(--violeta);
+}
+
+.iconBillete{
+    font-size: 1.3rem;
+    color: white;
+    border-radius: 50px;
+    background-color: var(--lila);
+    padding: 3px 5px 0px 5px;
+    margin-right: 10px;
+}
+
+.iconTacho{
+    font-size: 1.3rem;
+    padding: 3px 0px 0px 5px;
+}
+
+.listaGastos > li{
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end;
+    font-size: .8rem;
+    padding: 3vh 0;
+    margin: 0 15px;
+    list-style: none;
+    border-bottom: 1px solid var(--grisclaro);
+}
+
 
 
 
@@ -116,6 +186,35 @@ input{
 /* responsive tablet */
   
 @media (min-width: 480px){
+    p{
+        font-size: 1rem;
+    }
+    .totales{  
+        padding: 3vh 5vw;
+    }
+    .iconoBilletera{
+        font-size: 4rem;
+    }
+    .montos h3{
+        font-size: 1rem;
+    }
+    input{
+        font-size: 1rem;
+        width: 60%;
+    }
+    label{
+        font-size: 1rem;
+    }
+    .iconoGasto{
+        font-size: 2rem;
+    }
+
+    .tituloGastos > h2{
+        font-size: 1.5rem;
+    }
+    .listaGastos > li{
+        font-size: 1rem;
+    }
 }
 
 /* responsive pc escritorio */
