@@ -22,15 +22,15 @@
         </div>
         <div class="montos">
             <div class="contenedorDisponible">
-                <h2 class="montoDispo" id="montoDisponible">$0</h2>
+                <h2 class="montoDispo" id="montoDisponible">$0,00</h2>
                 <p>Disponible</p>
             </div>
             <div class="contenedorIngreso">
-                <h3 id="montoIngresos">$0</h3>
+                <h3 id="montoIngresos">$0,00</h3>
                 <p>Total ingreso</p>
             </div>
             <div class="contenedorGasto">
-                <h3 id="montoGastos">$0</h3>
+                <h3 id="montoGastos">$0,00</h3>
                 <p>Total gastos</p>
                 </div>
         </div>
@@ -40,7 +40,7 @@
     <section class="ingresos"> <!-- seccion donde se ingresa el dinero disponible y los gastos -->
         <div class="inputDisponible">
             <label for="idDispo">Dinero disponible</label>
-            <input onkeypress="disponible(event)" type="number" id="idDispo" placeholder="Ingrese su dinero disponible">
+            <input onkeypress="agregarDisponible(event)" type="number" id="idDispo" placeholder="Ingrese su dinero disponible">
         </div>
         <div class="contenedorInputs">
             <div class="gastoMonto">
@@ -63,25 +63,9 @@
             <h2>Gastos</h2>
         </div>
         <ul class="listaGastos" id="idLista">
-            <li>
-                <div>
-                    <i class="bi bi-cash-coin iconBillete"></i>
-                    <span>ventilador</span>
-                </div>
-                <div>
-                    <span>5000</span>
-                    <i class="bi bi-trash3 iconTacho"></i>
-                </div>
-            </li>
-            
-            
+          
         </ul>
     </section>
-
-
-
-
-
 
 
     <script src="./app.js"></script>
