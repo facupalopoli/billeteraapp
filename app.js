@@ -6,6 +6,14 @@ let montoIngresos = document.getElementById('montoIngresos')
 let montoGastos = document.getElementById('montoGastos')
 let montoDisponible = document.getElementById('montoDisponible')
 
+let diaNoche = document.getElementById('diaNoche')
+diaNoche.addEventListener('click', () => {
+    document.body.classList.toggle('dark')
+    diaNoche.classList.toggle('active')
+})
+
+
+
 function agregarDisponible(e){
     if(e.keyCode === 13){
         e.preventDefault()
