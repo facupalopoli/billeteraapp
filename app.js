@@ -19,6 +19,7 @@ function agregarDisponible(e){
         e.preventDefault()
         idDispo = parseFloat(document.getElementById('idDispo').value)
         montoIngresos.innerText = `$${idDispo}`
+        montoDisponible.innerText = `$${idDispo}`
     }
 }
 
