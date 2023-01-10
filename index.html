@@ -17,8 +17,8 @@
             <i class="bi bi-moon-fill"></i>
         </button>
     </div>
-
-    <section class="totales"> <!-- seccion donde se muestran los montos totales -->
+            <!-- seccion donde se muestran los montos totales -->
+    <section class="totales"> 
         <div class="contenedorBilletera">
             <i class="bi bi-wallet iconoBilletera"></i>
         </div>
@@ -38,8 +38,8 @@
         </div>
     </section>
 
-
-    <section class="ingresos"> <!-- seccion donde se ingresa el dinero disponible y los gastos -->
+            <!-- seccion donde se ingresa el dinero disponible y los gastos -->
+    <section class="ingresos"> 
         <div class="inputDisponible">
             <label for="idDispo">Dinero disponible</label>
             <input onkeypress="agregarDisponible(event)" type="number" id="idDispo" placeholder="Ingrese su dinero disponible">
@@ -59,11 +59,12 @@
         </div>
     </section>
 
-
-    <section class="gastos">    <!-- seccion donde se muestran los gastos -->
+            <!-- seccion donde se muestran los gastos -->
+    <section class="gastos">    
         <div class="tituloGastos">
             <h2>Gastos</h2>
         </div>
+        <!-- lista desorganizada para ir ingresando los <li> a traves de Js -->
         <ul class="listaGastos" id="idLista">
           
         </ul>

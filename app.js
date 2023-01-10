@@ -23,6 +23,7 @@ function agregarDisponible(e){
     }
 }
 
+
 let sumaGastos = 0
 function agregarGasto(){
     idGasto = document.getElementById('idGasto').value
