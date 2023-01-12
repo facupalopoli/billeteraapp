@@ -5,6 +5,7 @@ let idLista = document.getElementById('idLista') //asignacion de la lista
 let montoIngresos = document.getElementById('montoIngresos') //
 let montoGastos = document.getElementById('montoGastos')
 let montoDisponible = document.getElementById('montoDisponible')
+let agregarGasto = document.getElementById('agregarGasto')
 
 let diaNoche = document.getElementById('diaNoche')
 diaNoche.addEventListener('click', () => {   //funcion que escucha el click y cambia la clase al body
@@ -28,9 +29,8 @@ function agregarDisponible(e){      //funcion que escucha una tecla cualquier y 
     }
 }
 
-
 let sumaGastos = 0
-function agregarGasto(){
+const gasto = () => { 
     idGasto = document.getElementById('idGasto').value
     idMonto = parseFloat(document.getElementById('idMonto').value)
     sumaGastos += idMonto
@@ -50,6 +50,33 @@ function agregarGasto(){
         montoDisponible.style.color=`#D23D03`
     }
 }
+
+agregarGasto.addEventListener('click',gasto)
+
+
+
+
+
+/* function agregarGasto(){
+    idGasto = document.getElementById('idGasto').value
+    idMonto = parseFloat(document.getElementById('idMonto').value)
+    sumaGastos += idMonto
+    idLista.innerHTML += `<li>
+                            <div>
+                                <i class="bi bi-cash-coin iconBillete"></i>
+                                <span>${idGasto}</span>
+                            </div>
+                            <div>
+                                <span>$${idMonto}</span>
+                                <i onclick="eliminarGasto()" class="bi bi-trash3 iconTacho"></i>
+                            </div>
+                          </li>`
+    montoGastos.innerText = `$${sumaGastos}`
+    montoDisponible.innerText = `$${idDispo-sumaGastos}`
+    if((idDispo-sumaGastos) < 0){
+        montoDisponible.style.color=`#D23D03`
+    }
+} */
 
 function eliminarGasto(){
     idLista.innerHTML -= `<li>
