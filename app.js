@@ -56,6 +56,8 @@ const gasto = () => {
                             </li>`
         montoGastos.innerText = `$${sumaGastos}`
         montoDisponible.innerText = `$${disponible-sumaGastos}`
+        document.getElementById('idGasto').value = ''
+        document.getElementById('idMonto').value = ''
         }else{
             alert('Detalle el gasto correctamente')
         }    
@@ -63,6 +65,7 @@ const gasto = () => {
     if((disponible-sumaGastos) < 0){
         montoDisponible.style.color=`#D23D03`
     }
+    
 }
 
 agregarGasto.addEventListener('click',gasto)
