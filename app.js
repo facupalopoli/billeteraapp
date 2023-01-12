@@ -51,7 +51,7 @@ const gasto = () => {
                                 </div>
                                 <div>
                                     <span>$${idMonto}</span>
-                                    <i id="eliminarGasto" class="bi bi-trash3 iconTacho"></i>
+                                    <abbr title='Eliminar Gasto'><i id="eliminarGasto" class="bi bi-trash3 iconTacho"></i></abbr>
                                 </div>
                             </li>`
         montoGastos.innerText = `$${sumaGastos}`
@@ -75,7 +75,6 @@ agregarGasto.addEventListener('click',gasto)
 let eliminarGasto = document.getElementById('eliminarGasto')
 
 const eliminar = () => {
-    console.log('asdas')
     idLista.innerHTML -= `<li>
                             <div>
                                 <i class="bi bi-cash-coin iconBillete"></i>
@@ -83,11 +82,10 @@ const eliminar = () => {
                             </div>
                             <div>
                                 <span>$${idMonto}</span>
-                                <i id="eliminarGasto" class="bi bi-trash3 iconTacho"></i>
+                                <abbr title='Eliminar Gasto'><i id="eliminarGasto" class="bi bi-trash3 iconTacho"></i></abbr>
                             </div>
                           </li>`
 }
 
-if (eliminarGasto){
+
 eliminarGasto.addEventListener('click',eliminar)
-}

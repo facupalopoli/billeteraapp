@@ -267,6 +267,7 @@ input:hover{
 .iconTacho{
     font-size: 1.3rem;
     padding: 3px 0px 0px 5px;
+    cursor: pointer;
 }
 
 .listaGastos > li{
