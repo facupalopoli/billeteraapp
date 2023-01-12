@@ -50,7 +50,8 @@ const gasto = () => {
                                     <span>${idGasto}</span>
                                 </div>
                                 <div>
-                                    <span>$${idMonto}</span>
+                                    <i>$</i>
+                                    <span>${idMonto}</span>
                                     <abbr title='Eliminar Gasto'><i id="eliminarGasto" class="bi bi-trash3 iconTacho"></i></abbr>
                                 </div>
                             </li>`
@@ -72,20 +73,19 @@ agregarGasto.addEventListener('click',gasto)
 
 
 
-let eliminarGasto = document.getElementById('eliminarGasto')
-
-const eliminar = () => {
-    idLista.innerHTML -= `<li>
-                            <div>
-                                <i class="bi bi-cash-coin iconBillete"></i>
-                                <span>${idGasto}</span>
-                            </div>
-                            <div>
-                                <span>$${idMonto}</span>
-                                <abbr title='Eliminar Gasto'><i id="eliminarGasto" class="bi bi-trash3 iconTacho"></i></abbr>
-                            </div>
-                          </li>`
+function eliminar(btn){
+    const ul = btn.target.parentNode.parentNode.parentNode.parentNode
+    const li = btn.target.parentNode.parentNode.parentNode
+    const montoItem = parseFloat(btn.target.parentNode.parentElement.children[1].innerText)
+    sumaGastos -= montoItem
+    ul.removeChild(li)
+    montoGastos.innerText = `$${sumaGastos}`
+    montoDisponible.innerText = `$${disponible-sumaGastos}`
+    disponible-sumaGastos >= 0 ? montoDisponible.style.color=`#008000` : montoDisponible.style.color=`#D23D03`
 }
 
-
-eliminarGasto.addEventListener('click',eliminar)
+idLista.addEventListener('click', (event) =>{
+    if(event.target.id === "eliminarGasto"){
+        eliminar(event)
+    }
+})
